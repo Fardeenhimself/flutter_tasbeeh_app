@@ -1,29 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:tasbeeh_app/model/reflect_model.dart';
 
 class CounterPageCard extends StatelessWidget {
   const CounterPageCard({
-    required this.countNumber,
-    required this.icon,
-    required this.onPressed,
     super.key,
+    required this.reflectionType,
+    required this.counter,
   });
 
-  final int countNumber;
-  final Icon icon;
-  final Function() onPressed;
+  final ReflectModel reflectionType;
+  final int counter;
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Center(
-          child: Text(
-            countNumber.toString(),
-            style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+        //The Title
+        Expanded(
+          child: Card(
+            child: Row(
+              children: [
+                Text(reflectionType.title),
+                const SizedBox(height: 16),
+                Text(reflectionType.arabic),
+                const SizedBox(height: 16),
+                Text(reflectionType.translation),
+              ],
+            ),
           ),
         ),
-        IconButton(onPressed: onPressed, icon: icon),
+        //The Counter
+        Text(counter.toString()),
       ],
     );
   }
