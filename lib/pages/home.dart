@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tasbeeh_app/components/home_card.dart';
+import 'package:tasbeeh_app/utils/custom_app_style.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,15 +14,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Tasbeeh',
-          style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-            letterSpacing: 1,
-          ),
-        ),
+        title: Text('Tasbeeh', style: CustomAppStyle.appBarStyle),
         centerTitle: true,
         elevation: 40,
         backgroundColor: Colors.green,

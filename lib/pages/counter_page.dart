@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tasbeeh_app/model/reflect_model.dart';
 import 'package:tasbeeh_app/utils/counter_page_card.dart';
+import 'package:tasbeeh_app/utils/custom_app_style.dart';
 
 class CounterPage extends StatefulWidget {
   const CounterPage({super.key, required this.reflectionType});
@@ -62,20 +63,11 @@ class _CounterPageState extends State<CounterPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    IconButton(
-                      onPressed: () => resetCounter(),
+                    CustomAppStyle.styledIconButton(
+                      onPress: () => resetCounter(),
                       icon: Icon(Icons.replay),
-                      style: IconButton.styleFrom(
-                        backgroundColor: Colors.lime,
-                        foregroundColor: Colors.white,
-                        enableFeedback: true,
-                        shape: CircleBorder(),
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 40,
-                          vertical: 20,
-                        ),
-                      ),
                     ),
+                    //Plus Button
                     IconButton(
                       onPressed: () => incrementCounter(),
                       icon: Icon(Icons.add),
@@ -92,19 +84,9 @@ class _CounterPageState extends State<CounterPage> {
                         elevation: 8,
                       ),
                     ),
-                    IconButton(
-                      onPressed: () => decrementCounter(),
+                    CustomAppStyle.styledIconButton(
+                      onPress: () => decrementCounter(),
                       icon: Icon(Icons.remove),
-                      style: IconButton.styleFrom(
-                        backgroundColor: Colors.lime,
-                        foregroundColor: Colors.white,
-                        enableFeedback: true,
-                        shape: CircleBorder(),
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 40,
-                          vertical: 20,
-                        ),
-                      ),
                     ),
                   ],
                 ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tasbeeh_app/model/reflect_model.dart';
+import 'custom_app_style.dart';
 
 class CustomCategoryCard extends StatelessWidget {
   const CustomCategoryCard({
@@ -31,11 +32,17 @@ class CustomCategoryCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(reflection.title),
+                  Text(reflection.title, style: CustomAppStyle.cardTitleStyle),
                   const SizedBox(height: 10),
-                  Text(reflection.arabic),
+                  Text(
+                    reflection.arabic,
+                    style: CustomAppStyle.cardArabicStyle,
+                  ),
                   const SizedBox(height: 10),
-                  Text(reflection.translation),
+                  Text(
+                    reflection.translation,
+                    style: CustomAppStyle.cardTranslationStyle,
+                  ),
                 ],
               ),
             ),

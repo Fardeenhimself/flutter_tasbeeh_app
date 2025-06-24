@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tasbeeh_app/lists/reflect_list.dart';
 import 'package:tasbeeh_app/model/reflect_model.dart';
 import 'package:tasbeeh_app/pages/counter_page.dart';
+import 'package:tasbeeh_app/utils/custom_app_style.dart';
 import 'package:tasbeeh_app/utils/custom_category_card.dart';
 
 class ReflectCategory extends StatelessWidget {
@@ -13,15 +14,7 @@ class ReflectCategory extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Reflect',
-          style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-            letterSpacing: 1,
-          ),
-        ),
+        title: Text('Reflect', style: CustomAppStyle.appBarStyle),
         centerTitle: true,
         elevation: 40,
         backgroundColor: Colors.green,
