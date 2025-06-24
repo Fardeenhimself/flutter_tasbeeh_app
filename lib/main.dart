@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:tasbeeh_app/lists/reflect_list.dart';
+import 'package:tasbeeh_app/pages/asma_husna.dart';
+import 'package:tasbeeh_app/pages/counter_page.dart';
 import 'package:tasbeeh_app/pages/home.dart';
+import 'package:tasbeeh_app/pages/reflect_category.dart';
 
 void main() => runApp(TasbeehApp());
 
@@ -13,6 +17,15 @@ class TasbeehApp extends StatefulWidget {
 class _TasbeehAppState extends State<TasbeehApp> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(title: 'Tasbeeh', home: HomePage());
+    return MaterialApp(
+      title: 'Tasbeeh',
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomePage(),
+        '/reflect_category': (context) =>  ReflectCategory(reflections: ReflectList().reflectList ),
+        '/asma_husna': (context) => const AsmaHusna(),
+        '/counter_page': (context) => const CounterPage(),
+      },
+    );
   }
 }

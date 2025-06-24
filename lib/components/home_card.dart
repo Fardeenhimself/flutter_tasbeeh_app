@@ -12,12 +12,16 @@ class HomeCard extends StatelessWidget {
         CustomHomeCard(
           text: 'Reflect',
           imagePath: 'assets/images/dhikr.png',
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/reflect_category');
+          },
         ),
         CustomHomeCard(
           text: 'Asma-Ul-Husna',
-          imagePath: 'assets/images/allah.png',
-          onPressed: () {},
+          imagePath: 'assets/images/asma.png',
+          onPressed: () {
+            Navigator.pushNamed(context, '/asma_husna');
+          },
         ),
       ],
     );
