@@ -16,9 +16,15 @@ class CounterPageCard extends StatelessWidget {
     return Column(
       children: [
         //The Title
-        Expanded(
-          child: Card(
-            child: Row(
+        Card(
+          margin: const EdgeInsets.all(20),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          elevation: 8,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+            child: Column(
               children: [
                 Text(reflectionType.title),
                 const SizedBox(height: 16),
@@ -29,8 +35,14 @@ class CounterPageCard extends StatelessWidget {
             ),
           ),
         ),
+        const SizedBox(height: 30),
+        const Divider(),
+        const SizedBox(height: 10),
         //The Counter
-        Text(counter.toString()),
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Text(counter.toString(), style: TextStyle(fontSize: 48)),
+        ),
       ],
     );
   }

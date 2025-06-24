@@ -11,26 +11,48 @@ class ReflectCategory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //debug print to see if it got the list
-    print("Reflections length: ${reflections.length}");
     return Scaffold(
-      appBar: AppBar(title: Text('Reflect Page')),
-      body: ListView.builder(
-        itemCount: reflections.length,
-        itemBuilder: (context, index) {
-          final reflection = reflections[index];
-          CustomCategoryCard(
-            reflection: reflection,
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => CounterPage(reflectionType: reflection),
-                ),
-              );
-            },
-          );
-        },
+      appBar: AppBar(
+        title: Text(
+          'Reflect',
+          style: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+            letterSpacing: 1,
+          ),
+        ),
+        centerTitle: true,
+        elevation: 40,
+        backgroundColor: Colors.green,
+      ),
+      body: Stack(
+        children: [
+          //Background Image
+          Positioned.fill(
+            child: Image.asset('assets/images/logo1.jpg', fit: BoxFit.cover),
+          ),
+          SafeArea(
+            child: ListView.builder(
+              itemCount: reflections.length,
+              itemBuilder: (context, index) {
+                final reflection = reflections[index];
+                return CustomCategoryCard(
+                  reflection: reflection,
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            CounterPage(reflectionType: reflection),
+                      ),
+                    );
+                  },
+                );
+              },
+            ),
+          ),
+        ],
       ),
     );
   }

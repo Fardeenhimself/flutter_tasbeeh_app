@@ -15,28 +15,100 @@ class _CounterPageState extends State<CounterPage> {
   //variable
   int _countNumber = 0;
 
-  //Function
-
+  //Increment Function
   void incrementCounter() {
-    _countNumber++;
+    setState(() {
+      _countNumber++;
+    });
+  }
+
+  //Decrement Function
+  void decrementCounter() {
+    if (_countNumber > 0) {
+      setState(() {
+        _countNumber--;
+      });
+    }
+  }
+
+  //Reset Function
+  void resetCounter() {
+    if (_countNumber > 0) {
+      setState(() {
+        _countNumber = 0;
+      });
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Counter Page')),
-      body: Column(
+      appBar: AppBar(title: Text('')),
+      body: Stack(
         children: [
-          CounterPageCard(
-            reflectionType: widget.reflectionType,
-            counter: _countNumber,
+          Positioned.fill(
+            child: Image.asset('assets/images/logo1.jpg', fit: BoxFit.cover),
           ),
-          IconButton(
-            onPressed: () => incrementCounter(),
-            icon: Icon(Icons.add),
-            style: IconButton.styleFrom(
-              backgroundColor: Colors.lime,
-              foregroundColor: Colors.white,
+
+          SafeArea(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CounterPageCard(
+                  reflectionType: widget.reflectionType,
+                  counter: _countNumber,
+                ),
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    IconButton(
+                      onPressed: () => resetCounter(),
+                      icon: Icon(Icons.replay),
+                      style: IconButton.styleFrom(
+                        backgroundColor: Colors.lime,
+                        foregroundColor: Colors.white,
+                        enableFeedback: true,
+                        shape: CircleBorder(),
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 40,
+                          vertical: 20,
+                        ),
+                      ),
+                    ),
+                    IconButton(
+                      onPressed: () => incrementCounter(),
+                      icon: Icon(Icons.add),
+                      style: IconButton.styleFrom(
+                        backgroundColor: Colors.lime,
+                        foregroundColor: Colors.white,
+                        iconSize: 100,
+                        enableFeedback: true,
+                        shape: CircleBorder(),
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 40,
+                          vertical: 20,
+                        ),
+                        elevation: 8,
+                      ),
+                    ),
+                    IconButton(
+                      onPressed: () => decrementCounter(),
+                      icon: Icon(Icons.remove),
+                      style: IconButton.styleFrom(
+                        backgroundColor: Colors.lime,
+                        foregroundColor: Colors.white,
+                        enableFeedback: true,
+                        shape: CircleBorder(),
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 40,
+                          vertical: 20,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
         ],

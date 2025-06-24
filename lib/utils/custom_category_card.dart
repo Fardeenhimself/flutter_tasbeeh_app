@@ -13,19 +13,32 @@ class CustomCategoryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Card(
-        child: Padding(
-          padding: EdgeInsetsGeometry.symmetric(horizontal: 20, vertical: 20),
-          child: Column(
-            children: [
-              Text(reflection.title),
-              const SizedBox(height: 10),
-              Text(reflection.arabic),
-              const SizedBox(height: 10),
-              Text(reflection.translation),
-            ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(16),
+        splashColor: Colors.teal,
+        child: Card(
+          elevation: 5,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadiusGeometry.circular(16),
+          ),
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(reflection.title),
+                  const SizedBox(height: 10),
+                  Text(reflection.arabic),
+                  const SizedBox(height: 10),
+                  Text(reflection.translation),
+                ],
+              ),
+            ),
           ),
         ),
       ),

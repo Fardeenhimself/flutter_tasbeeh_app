@@ -6,24 +6,42 @@ class HomeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        CustomHomeCard(
-          text: 'Reflect',
-          imagePath: 'assets/images/dhikr.png',
-          onPressed: () {
-            Navigator.pushNamed(context, '/reflect_category');
-          },
-        ),
-        CustomHomeCard(
-          text: 'Asma-Ul-Husna',
-          imagePath: 'assets/images/asma.png',
-          onPressed: () {
-            Navigator.pushNamed(context, '/asma_husna');
-          },
-        ),
-      ],
+    return Scaffold(
+      extendBodyBehindAppBar: true,
+      backgroundColor: Colors.transparent,
+      body: Stack(
+        children: [
+          //Background Picture
+          Positioned.fill(
+            child: Image.asset('assets/images/logo1.jpg', fit: BoxFit.cover),
+          ),
+
+          //Main Content
+          Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CustomHomeCard(
+                  text: 'Reflect',
+                  imagePath: 'assets/images/dhikr.png',
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/reflect_category');
+                  },
+                ),
+                const SizedBox(height: 20),
+                CustomHomeCard(
+                  text: 'Asma-Ul-Husna',
+                  imagePath: 'assets/images/asma.png',
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/asma_husna');
+                  },
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
