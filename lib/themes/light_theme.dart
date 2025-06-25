@@ -9,8 +9,9 @@ ThemeData lightTheme = ThemeData(
   ),
   brightness: Brightness.light,
   colorScheme: ColorScheme.light(
-    primary: Colors.white.withAlpha(190),
+    primary: Colors.white,
     secondary: Colors.black,
-    shadow: Colors.grey.shade300,
+    shadow: Colors.grey.shade500,
+    surface: Colors.white,
   ),
 );

@@ -45,59 +45,44 @@ class _CounterPageState extends State<CounterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('')),
-      body: Stack(
-        children: [
-          Positioned.fill(
-            child: Image.asset(
-              'assets/images/bg.png',
-              fit: BoxFit.cover,
-              opacity: AlwaysStoppedAnimation(0.31),
+      body: SafeArea(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CounterPageCard(
+              reflectionType: widget.reflectionType,
+              counter: _countNumber,
             ),
-          ),
-
-          SafeArea(
-            child: Column(
+            const SizedBox(height: 20),
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CounterPageCard(
-                  reflectionType: widget.reflectionType,
-                  counter: _countNumber,
+                CustomAppStyle.styledIconButton(
+                  onPress: () => resetCounter(),
+                  icon: Icon(Icons.replay),
                 ),
-                const SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CustomAppStyle.styledIconButton(
-                      onPress: () => resetCounter(),
-                      icon: Icon(Icons.replay),
-                    ),
-                    //Plus Button
-                    IconButton(
-                      onPressed: () => incrementCounter(),
-                      icon: Icon(Icons.add),
-                      style: IconButton.styleFrom(
-                        backgroundColor: Colors.teal[300]!,
-                        foregroundColor: Colors.white,
-                        iconSize: 100,
-                        enableFeedback: true,
-                        shape: CircleBorder(),
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 40,
-                          vertical: 20,
-                        ),
-                        elevation: 8,
-                      ),
-                    ),
-                    CustomAppStyle.styledIconButton(
-                      onPress: () => decrementCounter(),
-                      icon: Icon(Icons.remove),
-                    ),
-                  ],
+                //Plus Button
+                IconButton(
+                  onPressed: () => incrementCounter(),
+                  icon: Icon(Icons.add),
+                  style: IconButton.styleFrom(
+                    backgroundColor: Colors.teal[300]!,
+                    foregroundColor: Colors.white,
+                    iconSize: 100,
+                    enableFeedback: true,
+                    shape: CircleBorder(),
+                    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                    elevation: 8,
+                  ),
+                ),
+                CustomAppStyle.styledIconButton(
+                  onPress: () => decrementCounter(),
+                  icon: Icon(Icons.remove),
                 ),
               ],
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

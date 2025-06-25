@@ -10,45 +10,31 @@ class HomeCard extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
-        title: Text('Tasbeeh', style: CustomAppStyle.appBarStyle(context)),
+        title: Text('তাসবিহ', style: CustomAppStyle.appBarStyle(context)),
       ),
       extendBodyBehindAppBar: true,
-      body: Stack(
-        children: [
-          //Background Picture
-          Positioned.fill(
-            child: Image.asset(
-              'assets/images/bg.png',
-              fit: BoxFit.cover,
-              opacity: AlwaysStoppedAnimation(0.31),
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CustomHomeCard(
+              text: 'জিকির',
+              imagePath: 'assets/images/tasbih.png',
+              onPressed: () {
+                Navigator.pushNamed(context, '/reflect_category');
+              },
             ),
-          ),
-
-          //Main Content
-          Center(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                CustomHomeCard(
-                  text: 'Reflect',
-                  imagePath: 'assets/images/tasbih.png',
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/reflect_category');
-                  },
-                ),
-                const SizedBox(height: 20),
-                CustomHomeCard(
-                  text: 'Dua',
-                  imagePath: 'assets/images/hand.png',
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/asma_category');
-                  },
-                ),
-              ],
+            const SizedBox(height: 20),
+            CustomHomeCard(
+              text: 'দুয়া',
+              imagePath: 'assets/images/hand.png',
+              onPressed: () {
+                Navigator.pushNamed(context, '/asma_category');
+              },
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

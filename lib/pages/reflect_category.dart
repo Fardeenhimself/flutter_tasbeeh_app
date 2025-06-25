@@ -13,39 +13,27 @@ class ReflectCategory extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Reflect', style: CustomAppStyle.appBarStyle(context)),
+        title: Text('জিকির', style: CustomAppStyle.appBarStyle(context)),
       ),
-      body: Stack(
-        children: [
-          //Background Image
-          Positioned.fill(
-            child: Image.asset(
-              'assets/images/bg.png',
-              fit: BoxFit.cover,
-              opacity: AlwaysStoppedAnimation(0.31),
-            ),
-          ),
-          SafeArea(
-            child: ListView.builder(
-              itemCount: reflections.length,
-              itemBuilder: (context, index) {
-                final reflection = reflections[index];
-                return CustomCategoryCard(
-                  reflection: reflection,
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            CounterPage(reflectionType: reflection),
-                      ),
-                    );
-                  },
+      body: SafeArea(
+        child: ListView.builder(
+          itemCount: reflections.length,
+          itemBuilder: (context, index) {
+            final reflection = reflections[index];
+            return CustomCategoryCard(
+              reflection: reflection,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        CounterPage(reflectionType: reflection),
+                  ),
                 );
               },
-            ),
-          ),
-        ],
+            );
+          },
+        ),
       ),
     );
   }

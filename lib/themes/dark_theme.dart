@@ -27,13 +27,14 @@ final ThemeData darkTheme = ThemeData(
     centerTitle: true,
   ),
 
-  cardColor: const Color.fromRGBO(18, 18, 18, 1), // dark-friendly card color
+  cardColor: const Color.fromARGB(255, 48, 47, 47), // dark-friendly card color
 
   colorScheme: ColorScheme.dark(
     primary: const Color.fromRGBO(18, 18, 18, 1), // dark surface for cards
     secondary: Colors.green,
-    surface: Colors.grey.shade800,
-    shadow: Colors.black54,
+    surface: Color.fromRGBO(18, 18, 18, 1),
+    shadow: Colors.teal.shade200,
+    //shadow: Color.fromARGB(255, 48, 47, 47),
   ),
 
   shadowColor: Colors.black54,

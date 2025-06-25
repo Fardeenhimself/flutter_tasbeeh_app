@@ -14,38 +14,27 @@ class AsmaCategeory extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dua', style: CustomAppStyle.appBarStyle(context)),
+        title: Text('দুয়া', style: CustomAppStyle.appBarStyle(context)),
       ),
 
-      body: Stack(
-        children: [
-          Positioned.fill(
-            child: Image.asset(
-              'assets/images/bg.png',
-              fit: BoxFit.cover,
-              opacity: AlwaysStoppedAnimation(0.31),
-            ),
-          ),
-          SafeArea(
-            child: ListView.builder(
-              itemCount: duas.length,
-              itemBuilder: (context, index) {
-                final dua = duas[index];
-                return CustomAsmacat(
-                  dua: duas[index],
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => CounterPage(reflectionType: dua),
-                      ),
-                    );
-                  },
+      body: SafeArea(
+        child: ListView.builder(
+          itemCount: duas.length,
+          itemBuilder: (context, index) {
+            final dua = duas[index];
+            return CustomAsmacat(
+              dua: duas[index],
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CounterPage(reflectionType: dua),
+                  ),
                 );
               },
-            ),
-          ),
-        ],
+            );
+          },
+        ),
       ),
     );
   }

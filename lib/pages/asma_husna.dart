@@ -8,7 +8,7 @@ class AsmaHusna extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dua\'s', style: CustomAppStyle.appBarStyle(context)),
+        title: Text('দুয়া', style: CustomAppStyle.appBarStyle(context)),
       ),
       body: AsmaHusna(),
     );

@@ -4,54 +4,54 @@ class AsmaList {
   final List<AsmaModel> asmaList = [
     AsmaModel(
       id: 1,
-      duaCat: 'Marriage',
-      duaName: 'Rabbi inni lima anzalta ilayya min khayrin faqir',
+      duaCat: 'রিজিক',
+      duaName: 'রব্বি ইন্নি লিমা আনজালতা ইলাইয়া মিন খাইরিন ফাকির',
       duaArabic: 'رَبِّ إِنِّي لِمَا أَنْزَلْتَ إِلَيَّ مِنْ خَيْرٍ فَقِيرٌ',
       duaMeaning:
-          'My Lord, indeed I am, for whatever good You would send down to me, in need.',
-      duaIdentity: 'Sura Al-Qasas',
+          'হে আমার রব! আপনি যা আমার দিকে অবতীর্ণ করেছেন, আমি তার জন্য একান্ত দরিদ্র।',
+      duaIdentity: 'আল-কাসাসের-২৪',
     ),
 
     AsmaModel(
       id: 2,
-      duaCat: 'Character',
+      duaCat: 'সৎ জীবনসঙ্গী এবং সন্তান',
       duaName:
-          'Rabbana hablana min azwaajina wa dhuriyyatina qurrata A\'yunin waj\'alna lil- muttaqina imama',
+          'রব্বানা হাবলানা মিন আজওয়াজিনা ওয়া ধুররিয়্যাতিনা কুররাতা আয়ুনিন ওয়াজ’আলনা লিলমুত্তাকীনা ইমামা',
       duaArabic:
           'رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا',
       duaMeaning:
-          'Our Lord! Grant unto us wives and offspring who will be the comfort of our eyes, and give us (the grace) to lead the righteous.',
-      duaIdentity: 'Sura Furqan',
+          'হে আমাদের পালনকর্তা, আমাদের স্ত্রীদের পক্ষ থেকে এবং আমাদের সন্তানের পক্ষ থেকে আমাদের জন্য চোখের শীতলতা দান কর এবং আমাদেরকে মুত্তাকীদের নেতা বানিয়ে দাও।',
+      duaIdentity: 'সুরা আল-ফুরকান (৭৪)',
     ),
 
     AsmaModel(
       id: 3,
-      duaCat: 'Offspring',
-      duaName: 'Rabbi habli minas salehin',
+      duaCat: 'সন্তানসন্ততি',
+      duaName: 'রাব্বি হাবলি মিনাস সালেহীন',
       duaArabic: 'رَبِّ هَبْ لِي مِنَ الصَّالِحِينَ',
-      duaMeaning: 'My Lord, grant me from among the righteous',
-      duaIdentity: 'Sura As-Saffat',
+      duaMeaning: 'হে আমার রব! আমাকে সৎকর্মশীলদের অন্তর্ভুক্ত থেকে দান করুন।',
+      duaIdentity: 'সূরা আস-সাফফাত: ১০০',
     ),
 
     AsmaModel(
       id: 4,
-      duaCat: 'Health',
+      duaCat: 'অসুস্থ ব্যক্তির জন্য দোয়া',
       duaName:
-          'Allahumma Shafi A\'abdaka iyankua laka\' adduiyyan ao iyamshiya laka ila salah',
+          'আল্লাহুম্মাশফি ‘আবদাকা ইয়ানকুঅ লাকা ‘আদুয়্যান, আও ইয়ামশিয়া লাকা ইলা সালাহ',
       duaArabic:
           'اللَّهُمَّ اشْفِ عَبْدَكَ يَنْكُأْ لَكَ عَدُوًّا، أَوْ يَمْشِيَ لَكَ إِلَى صَلَاةٍ',
       duaMeaning:
-          'O Allah, heal Your servant so that he can harm Your enemy or go to You (to the mosque) to pray.',
-      duaIdentity: 'Sunan Abu Dawood (1508)',
+          'হে আল্লাহ, তুমি তোমার বান্দাকে সুস্থ করে দাও। যাতে সে তোমার শত্রুকে ক্ষতি করতে পারে অথবা তোমার দিকে (মসজিদে) নামাজ পড়তে যেতে পারে।',
+      duaIdentity: 'সুনান আবু দাউদ: (সংখ্যা: ১৫০৪)',
     ),
 
     AsmaModel(
       id: 5,
-      duaCat: 'Victory',
-      duaName: 'Rabbi Inni Maglubun faantasir',
+      duaCat: 'বিজয়',
+      duaName: 'রাব্বি ইন্নি মাগলুবুন ফানতাসির',
       duaArabic: 'رَبِّ إِنِّي مَغْلُوبٌ فَانْتَصِرْ',
-      duaMeaning: 'My Lord, I am at loss. So help me ',
-      duaIdentity: 'Sura Al-Qamar',
+      duaMeaning: 'হে আমার প্রতিপালক, আমি পরাজিত, তাই আমাকে সাহায্য করুন।',
+      duaIdentity: 'সুরা আল-কামার',
     ),
   ];
 }

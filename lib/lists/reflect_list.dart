@@ -4,33 +4,33 @@ class ReflectList {
   final List<ReflectModel> reflectList = [
     ReflectModel(
       id: 1,
-      title: 'Astagfirullah',
-      arabic: 'أَسْتَغْفِرُ ٱللَّٰهَ',
-      translation: 'I seek forgiveness from Allah',
+      title: 'আস্তাগফিরুল্লাহ',
+      arabic: 'أَسْتَغْفِرُ اللَّهَ',
+      translation: 'আমি আল্লাহর কাছে ক্ষমা চাই',
     ),
     ReflectModel(
       id: 2,
-      title: 'SubhanAllah',
-      arabic: 'سُبْحَانَ ٱللَّٰ',
-      translation: 'Glory be to Allah',
+      title: 'সুবহানাল্লাহ',
+      arabic: 'سُبْحَانَ اللَّهِ',
+      translation: 'আল্লাহ দোষমুক্ত, পবিত্র',
     ),
     ReflectModel(
       id: 3,
-      title: 'Alhamdulillah',
-      arabic: ' الحمد لله',
-      translation: 'Praise be to Allah',
+      title: 'আলহামদুলিল্লাহ',
+      arabic: ' الْحَمْدُ لِلَّهِ',
+      translation: 'সকল প্রশংসা আল্লাহর জন্য',
     ),
     ReflectModel(
       id: 4,
-      title: 'La Ilaha Illallah',
-      arabic: 'لَا إِلَٰهَ إِلَّا ٱللَّٰ',
+      title: 'লা ইলাহা ইল্লাল্লাহ',
+      arabic: 'لَا إِلٰهَ إِلَّا اللَّهُ',
       translation: 'There is no god but Allah',
     ),
     ReflectModel(
       id: 5,
-      title: 'Allahu Akbar',
-      arabic: 'أَالله أكب',
-      translation: 'Allah is the greatest',
+      title: 'আল্লাহু আকবার',
+      arabic: 'اللَّهُ أَكْبَرُ',
+      translation: 'আল্লাহ সর্বশ্রেষ্ঠ',
     ),
   ];
 }
