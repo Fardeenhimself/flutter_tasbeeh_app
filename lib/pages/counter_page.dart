@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasbeeh_app/components/show_success_modal.dart';
 import 'package:tasbeeh_app/model/reflect_model.dart';
 import 'package:tasbeeh_app/utils/counter_page_card.dart';
 import 'package:tasbeeh_app/utils/custom_app_style.dart';
@@ -27,6 +28,15 @@ class _CounterPageState extends State<CounterPage> {
       setState(() {
         _countNumber++;
       });
+      if (_countNumber == widget.maxCount) {
+        Future.delayed(Duration(milliseconds: 300), () {
+          if (!mounted) return;
+          showDialog(
+            context: context,
+            builder: (context) => ShowSuccessModal(),
+          );
+        });
+      }
     }
   }
 
