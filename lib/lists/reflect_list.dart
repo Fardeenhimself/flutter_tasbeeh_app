@@ -18,7 +18,7 @@ class ReflectList {
       id: 3,
       title: 'Alhamdulillah',
       arabic: ' الحمد لله',
-      translation: 'Praise be to God',
+      translation: 'Praise be to Allah',
     ),
     ReflectModel(
       id: 4,

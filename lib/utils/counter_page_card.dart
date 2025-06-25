@@ -9,13 +9,13 @@ class CounterPageCard extends StatelessWidget {
     required this.counter,
   });
 
-  var reflectionType;
+  dynamic reflectionType;
   //final ReflectModel reflectionType;
   final int counter;
 
   @override
   Widget build(BuildContext context) {
-    print(reflectionType.runtimeType);
+    var checkDisplay = reflectionType.runtimeType;
     return Column(
       children: [
         //The Title
@@ -30,17 +30,23 @@ class CounterPageCard extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  reflectionType.title,
+                  checkDisplay == ReflectModel
+                      ? reflectionType.title
+                      : reflectionType.duaName,
                   style: CustomAppStyle.cardTitleStyle,
                 ),
                 const SizedBox(height: 16),
                 Text(
-                  reflectionType.arabic,
+                  checkDisplay == ReflectModel
+                      ? reflectionType.arabic
+                      : reflectionType.duaArabic,
                   style: CustomAppStyle.cardArabicStyle,
                 ),
                 const SizedBox(height: 16),
                 Text(
-                  reflectionType.translation,
+                  checkDisplay == ReflectModel
+                      ? reflectionType.translation
+                      : reflectionType.duaMeaning,
                   style: CustomAppStyle.cardTranslationStyle,
                 ),
               ],

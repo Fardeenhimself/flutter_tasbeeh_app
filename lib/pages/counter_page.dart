@@ -4,9 +4,9 @@ import 'package:tasbeeh_app/utils/counter_page_card.dart';
 import 'package:tasbeeh_app/utils/custom_app_style.dart';
 
 class CounterPage extends StatefulWidget {
-  const CounterPage({super.key, required this.reflectionType});
+   CounterPage({super.key, required this.reflectionType});
 
-  final ReflectModel reflectionType;
+  var reflectionType;
 
   @override
   State<CounterPage> createState() => _CounterPageState();

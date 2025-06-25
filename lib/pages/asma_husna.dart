@@ -13,7 +13,7 @@ class AsmaHusna extends StatelessWidget {
         elevation: 40,
         backgroundColor: Colors.green,
       ),
-      body: Text('Dua\'s of Prophets'),
+      body: AsmaHusna(),
     );
   }
 }

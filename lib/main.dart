@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:tasbeeh_app/lists/asma_list.dart';
 import 'package:tasbeeh_app/lists/reflect_list.dart';
+import 'package:tasbeeh_app/pages/asma_categeory.dart';
 import 'package:tasbeeh_app/pages/asma_husna.dart';
 import 'package:tasbeeh_app/pages/home.dart';
 import 'package:tasbeeh_app/pages/reflect_category.dart';
-
 
 void main() => runApp(TasbeehApp());
 
@@ -24,7 +25,7 @@ class _TasbeehAppState extends State<TasbeehApp> {
         '/': (context) => HomePage(),
         '/reflect_category': (context) =>
             ReflectCategory(reflections: ReflectList().reflectList),
-        '/asma_husna': (context) => const AsmaHusna(),
+        '/asma_category': (context) => AsmaCategeory(duas: AsmaList().asmaList),
         //'/counter_page': (context) =>  CounterPage(reflectionType: )
       },
     );

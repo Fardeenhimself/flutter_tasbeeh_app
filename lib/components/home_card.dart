@@ -34,7 +34,7 @@ class HomeCard extends StatelessWidget {
                   text: 'Dua',
                   imagePath: 'assets/images/hand.png',
                   onPressed: () {
-                    Navigator.pushNamed(context, '/asma_husna');
+                    Navigator.pushNamed(context, '/asma_category');
                   },
                 ),
               ],

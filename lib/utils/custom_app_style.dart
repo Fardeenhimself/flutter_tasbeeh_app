@@ -32,6 +32,19 @@ class CustomAppStyle {
     color: Colors.black54,
   );
 
+  //Text Style for dua category
+  static final duaCatStyle = GoogleFonts.poppins(
+    fontSize: 14,
+    color: Colors.black54,
+    fontWeight: FontWeight.w500,
+  );
+
+  //Identity style for dua
+  static final duaIdentityStyle = GoogleFonts.inter(
+    fontSize: 12,
+    color: Colors.white,
+  );
+
   //Counter number Style
   static final counterNumberStyle = GoogleFonts.poppins(
     fontSize: 48,
