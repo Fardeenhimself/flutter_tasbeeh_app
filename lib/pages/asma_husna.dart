@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasbeeh_app/components/custom_drawer.dart';
 import 'package:tasbeeh_app/utils/custom_app_style.dart';
 
 class AsmaHusna extends StatelessWidget {
@@ -10,6 +11,7 @@ class AsmaHusna extends StatelessWidget {
       appBar: AppBar(
         title: Text('দুয়া', style: CustomAppStyle.appBarStyle(context)),
       ),
+      endDrawer: CustomDrawer(),
       body: AsmaHusna(),
     );
   }

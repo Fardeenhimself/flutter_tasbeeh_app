@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasbeeh_app/components/custom_drawer.dart';
 import 'package:tasbeeh_app/utils/custom_app_style.dart';
 import 'package:tasbeeh_app/utils/custom_home_card.dart';
 
@@ -13,6 +14,9 @@ class HomeCard extends StatelessWidget {
         title: Text('তাসবিহ', style: CustomAppStyle.appBarStyle(context)),
       ),
       extendBodyBehindAppBar: true,
+
+      //A Drawer
+      endDrawer: CustomDrawer(),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,

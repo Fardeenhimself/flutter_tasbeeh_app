@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tasbeeh_app/components/custom_drawer.dart';
 import 'package:tasbeeh_app/model/reflect_model.dart';
 import 'package:tasbeeh_app/pages/counter_page.dart';
 import 'package:tasbeeh_app/utils/custom_app_style.dart';
@@ -16,6 +17,7 @@ class ReflectCategory extends StatelessWidget {
       appBar: AppBar(
         title: Text('জিকির', style: CustomAppStyle.appBarStyle(context)),
       ),
+      endDrawer: CustomDrawer(),
       body: SafeArea(
         child: ListView.builder(
           itemCount: reflections.length,
