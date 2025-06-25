@@ -24,7 +24,7 @@ class ReflectList {
       id: 4,
       title: 'লা ইলাহা ইল্লাল্লাহ',
       arabic: 'لَا إِلٰهَ إِلَّا اللَّهُ',
-      translation: 'There is no god but Allah',
+      translation: 'আল্লাহ ছাড়া কোনো উপাস্য নেই',
     ),
     ReflectModel(
       id: 5,

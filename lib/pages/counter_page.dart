@@ -4,9 +4,14 @@ import 'package:tasbeeh_app/utils/counter_page_card.dart';
 import 'package:tasbeeh_app/utils/custom_app_style.dart';
 
 class CounterPage extends StatefulWidget {
-  CounterPage({super.key, required this.reflectionType});
+  CounterPage({
+    super.key,
+    required this.reflectionType,
+    required this.maxCount,
+  });
 
   dynamic reflectionType;
+  final int maxCount;
 
   @override
   State<CounterPage> createState() => _CounterPageState();
@@ -18,9 +23,11 @@ class _CounterPageState extends State<CounterPage> {
 
   //Increment Function
   void incrementCounter() {
-    setState(() {
-      _countNumber++;
-    });
+    if (_countNumber < widget.maxCount) {
+      setState(() {
+        _countNumber++;
+      });
+    }
   }
 
   //Decrement Function
@@ -52,6 +59,7 @@ class _CounterPageState extends State<CounterPage> {
             CounterPageCard(
               reflectionType: widget.reflectionType,
               counter: _countNumber,
+              maxCount: widget.maxCount,
             ),
             const SizedBox(height: 20),
             Row(

@@ -7,9 +7,11 @@ class CounterPageCard extends StatelessWidget {
     super.key,
     required this.reflectionType,
     required this.counter,
+    required this.maxCount,
   });
 
   dynamic reflectionType;
+  final int maxCount;
   //final ReflectModel reflectionType;
   final int counter;
 
@@ -58,7 +60,7 @@ class CounterPageCard extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(20.0),
           child: Text(
-            counter.toString(),
+            '$counter / $maxCount',
             style: CustomAppStyle.counterNumberStyle,
           ),
         ),
