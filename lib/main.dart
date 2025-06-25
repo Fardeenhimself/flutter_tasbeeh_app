@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tasbeeh_app/lists/reflect_list.dart';
 import 'package:tasbeeh_app/pages/asma_husna.dart';
-import 'package:tasbeeh_app/pages/counter_page.dart';
 import 'package:tasbeeh_app/pages/home.dart';
 import 'package:tasbeeh_app/pages/reflect_category.dart';
-import 'package:tasbeeh_app/model/reflect_model.dart';
+
 
 void main() => runApp(TasbeehApp());
 

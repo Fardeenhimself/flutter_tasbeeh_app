@@ -24,15 +24,15 @@ class HomeCard extends StatelessWidget {
               children: [
                 CustomHomeCard(
                   text: 'Reflect',
-                  imagePath: 'assets/images/dhikr.png',
+                  imagePath: 'assets/images/tasbih.png',
                   onPressed: () {
                     Navigator.pushNamed(context, '/reflect_category');
                   },
                 ),
                 const SizedBox(height: 20),
                 CustomHomeCard(
-                  text: 'Asma-Ul-Husna',
-                  imagePath: 'assets/images/asma.png',
+                  text: 'Dua',
+                  imagePath: 'assets/images/hand.png',
                   onPressed: () {
                     Navigator.pushNamed(context, '/asma_husna');
                   },

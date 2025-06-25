@@ -8,12 +8,12 @@ class AsmaHusna extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Asma-Ul-Husna', style: CustomAppStyle.appBarStyle),
+        title: Text('Dua\'s', style: CustomAppStyle.appBarStyle),
         centerTitle: true,
         elevation: 40,
         backgroundColor: Colors.green,
       ),
-      body: Text('Asma-Ul-Husna'),
+      body: Text('Dua\'s of Prophets'),
     );
   }
 }

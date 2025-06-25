@@ -3,17 +3,19 @@ import 'package:tasbeeh_app/model/reflect_model.dart';
 import 'package:tasbeeh_app/utils/custom_app_style.dart';
 
 class CounterPageCard extends StatelessWidget {
-  const CounterPageCard({
+  CounterPageCard({
     super.key,
     required this.reflectionType,
     required this.counter,
   });
 
-  final ReflectModel reflectionType;
+  var reflectionType;
+  //final ReflectModel reflectionType;
   final int counter;
 
   @override
   Widget build(BuildContext context) {
+    print(reflectionType.runtimeType);
     return Column(
       children: [
         //The Title
