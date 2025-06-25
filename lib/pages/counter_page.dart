@@ -68,43 +68,49 @@ class _CounterPageState extends State<CounterPage> {
       appBar: AppBar(title: Text('')),
       endDrawer: CustomDrawer(),
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            CounterPageCard(
-              reflectionType: widget.reflectionType,
-              counter: _countNumber,
-              maxCount: widget.maxCount,
-            ),
-            const SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                CustomAppStyle.styledIconButton(
-                  onPress: () => resetCounter(),
-                  icon: Icon(Icons.replay),
-                ),
-                //Plus Button
-                IconButton(
-                  onPressed: () => incrementCounter(),
-                  icon: Icon(Icons.add),
-                  style: IconButton.styleFrom(
-                    backgroundColor: Colors.teal[300]!,
-                    foregroundColor: Colors.white,
-                    iconSize: 100,
-                    enableFeedback: true,
-                    shape: CircleBorder(),
-                    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-                    elevation: 8,
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.symmetric(vertical: 20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CounterPageCard(
+                reflectionType: widget.reflectionType,
+                counter: _countNumber,
+                maxCount: widget.maxCount,
+              ),
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CustomAppStyle.styledIconButton(
+                    onPress: () => resetCounter(),
+                    icon: Icon(Icons.replay),
                   ),
-                ),
-                CustomAppStyle.styledIconButton(
-                  onPress: () => decrementCounter(),
-                  icon: Icon(Icons.remove),
-                ),
-              ],
-            ),
-          ],
+                  //Plus Button
+                  IconButton(
+                    onPressed: () => incrementCounter(),
+                    icon: Icon(Icons.add),
+                    style: IconButton.styleFrom(
+                      backgroundColor: Colors.teal[300]!,
+                      foregroundColor: Colors.white,
+                      iconSize: 100,
+                      enableFeedback: true,
+                      shape: CircleBorder(),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 40,
+                        vertical: 20,
+                      ),
+                      elevation: 8,
+                    ),
+                  ),
+                  CustomAppStyle.styledIconButton(
+                    onPress: () => decrementCounter(),
+                    icon: Icon(Icons.remove),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
