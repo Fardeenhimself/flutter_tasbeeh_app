@@ -13,16 +13,17 @@ class ReflectCategory extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Reflect', style: CustomAppStyle.appBarStyle),
-        centerTitle: true,
-        elevation: 40,
-        backgroundColor: Colors.green,
+        title: Text('Reflect', style: CustomAppStyle.appBarStyle(context)),
       ),
       body: Stack(
         children: [
           //Background Image
           Positioned.fill(
-            child: Image.asset('assets/images/logo1.jpg', fit: BoxFit.cover),
+            child: Image.asset(
+              'assets/images/bg.png',
+              fit: BoxFit.cover,
+              opacity: AlwaysStoppedAnimation(0.31),
+            ),
           ),
           SafeArea(
             child: ListView.builder(

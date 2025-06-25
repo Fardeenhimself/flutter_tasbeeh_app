@@ -17,6 +17,8 @@ class CustomAsmacat extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         splashColor: Colors.teal,
         child: Card(
+          color: Theme.of(context).colorScheme.primary,
+          shadowColor: Theme.of(context).colorScheme.shadow,
           elevation: 5,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadiusGeometry.circular(16),

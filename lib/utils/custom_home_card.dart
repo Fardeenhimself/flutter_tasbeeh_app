@@ -20,9 +20,10 @@ class CustomHomeCard extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: CustomAppStyle.styledCard(
+          context: context,
           child: Row(
             children: [
-              CustomAppStyle.roundImage(imagePath),
+              CustomAppStyle.roundImage(imagePath, context),
               const SizedBox(width: 20),
               Text(text, style: CustomAppStyle.cardTitleStyle),
             ],

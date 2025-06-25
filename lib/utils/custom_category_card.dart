@@ -20,11 +20,8 @@ class CustomCategoryCard extends StatelessWidget {
         onTap: onTap,
         borderRadius: BorderRadius.circular(16),
         splashColor: Colors.teal,
-        child: Card(
-          elevation: 5,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadiusGeometry.circular(16),
-          ),
+        child: CustomAppStyle.styledCard(
+          context: context,
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             child: Padding(

@@ -8,10 +8,7 @@ class AsmaHusna extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dua\'s', style: CustomAppStyle.appBarStyle),
-        centerTitle: true,
-        elevation: 40,
-        backgroundColor: Colors.green,
+        title: Text('Dua\'s', style: CustomAppStyle.appBarStyle(context)),
       ),
       body: AsmaHusna(),
     );

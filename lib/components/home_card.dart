@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasbeeh_app/utils/custom_app_style.dart';
 import 'package:tasbeeh_app/utils/custom_home_card.dart';
 
 class HomeCard extends StatelessWidget {
@@ -7,13 +8,20 @@ class HomeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.surface,
+      appBar: AppBar(
+        title: Text('Tasbeeh', style: CustomAppStyle.appBarStyle(context)),
+      ),
       extendBodyBehindAppBar: true,
-      backgroundColor: Colors.transparent,
       body: Stack(
         children: [
           //Background Picture
           Positioned.fill(
-            child: Image.asset('assets/images/logo1.jpg', fit: BoxFit.cover),
+            child: Image.asset(
+              'assets/images/bg.png',
+              fit: BoxFit.cover,
+              opacity: AlwaysStoppedAnimation(0.31),
+            ),
           ),
 
           //Main Content

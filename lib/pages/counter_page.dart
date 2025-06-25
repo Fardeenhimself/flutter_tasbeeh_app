@@ -4,9 +4,9 @@ import 'package:tasbeeh_app/utils/counter_page_card.dart';
 import 'package:tasbeeh_app/utils/custom_app_style.dart';
 
 class CounterPage extends StatefulWidget {
-   CounterPage({super.key, required this.reflectionType});
+  CounterPage({super.key, required this.reflectionType});
 
-  var reflectionType;
+  dynamic reflectionType;
 
   @override
   State<CounterPage> createState() => _CounterPageState();
@@ -48,7 +48,11 @@ class _CounterPageState extends State<CounterPage> {
       body: Stack(
         children: [
           Positioned.fill(
-            child: Image.asset('assets/images/logo1.jpg', fit: BoxFit.cover),
+            child: Image.asset(
+              'assets/images/bg.png',
+              fit: BoxFit.cover,
+              opacity: AlwaysStoppedAnimation(0.31),
+            ),
           ),
 
           SafeArea(
@@ -72,7 +76,7 @@ class _CounterPageState extends State<CounterPage> {
                       onPressed: () => incrementCounter(),
                       icon: Icon(Icons.add),
                       style: IconButton.styleFrom(
-                        backgroundColor: Colors.lime,
+                        backgroundColor: Colors.teal[300]!,
                         foregroundColor: Colors.white,
                         iconSize: 100,
                         enableFeedback: true,
