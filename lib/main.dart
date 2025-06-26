@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:tasbeeh_app/lists/asma_list.dart';
 import 'package:tasbeeh_app/lists/reflect_list.dart';
 import 'package:tasbeeh_app/pages/asma_categeory.dart';
-import 'package:tasbeeh_app/pages/asma_husna.dart';
 import 'package:tasbeeh_app/pages/home.dart';
 import 'package:tasbeeh_app/pages/reflect_category.dart';
 import 'package:tasbeeh_app/themes/dark_theme.dart';

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tasbeeh_app/components/custom_drawer.dart';
-import 'package:tasbeeh_app/lists/asma_list.dart';
 import 'package:tasbeeh_app/model/asma_model.dart';
 import 'package:tasbeeh_app/pages/counter_page.dart';
 import 'package:tasbeeh_app/utils/custom_app_style.dart';
