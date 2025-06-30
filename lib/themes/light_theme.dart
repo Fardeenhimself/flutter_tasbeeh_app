@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 var kLightColorTheme = ColorScheme.fromSeed(
   seedColor: Color.fromARGB(255, 176, 219, 156),
@@ -23,64 +22,74 @@ ThemeData lightTheme = ThemeData().copyWith(
   ),
 
   textTheme: ThemeData().textTheme.copyWith(
-    titleLarge: GoogleFonts.galada(
-      fontSize: 35,
+    titleLarge: TextStyle(
+      fontFamily: 'Galada',
       fontWeight: FontWeight.bold,
       letterSpacing: 1.5,
       color: kLightColorTheme.primary,
     ),
 
-    titleMedium: GoogleFonts.notoSerifBengali(
+    titleMedium: TextStyle(
+      fontFamily: 'Bangla',
       fontSize: 26,
       fontWeight: FontWeight.bold,
       color: kLightColorTheme.primary,
     ),
 
-    titleSmall: GoogleFonts.notoSerifBengali(
+    titleSmall: TextStyle(
+      fontFamily: 'Bangla',
       fontSize: 16,
       fontWeight: FontWeight.w600,
       color: kLightColorTheme.onTertiary,
     ),
 
-    bodyLarge: GoogleFonts.lateef(
+    bodyLarge: TextStyle(
+      fontFamily: 'Lateef',
       fontSize: 44,
       color: kLightColorTheme.primary,
     ),
 
-    bodyMedium: GoogleFonts.notoSerifBengali(
+    bodyMedium: TextStyle(
+      fontFamily: 'Bangla',
       fontSize: 22,
       color: kLightColorTheme.primary,
       fontWeight: FontWeight.w600,
     ),
 
-    bodySmall: GoogleFonts.notoSerifBengali(
+    bodySmall: TextStyle(
+      fontFamily: 'Bangla',
       fontSize: 18,
       color: kLightColorTheme.primary,
     ),
 
-    displayLarge: GoogleFonts.inter(
+    displayLarge: TextStyle(
+      fontFamily: 'Inter',
       fontSize: 50,
       color: kLightColorTheme.tertiary,
     ),
 
-    displayMedium: GoogleFonts.notoSerifBengali(
+    displayMedium: TextStyle(
+      fontFamily: 'Bangla',
       fontSize: 14,
       color: kLightColorTheme.primary,
     ),
 
-    displaySmall: GoogleFonts.notoSerifBengali(
+    displaySmall: TextStyle(
+      fontFamily: 'Bangla',
       fontSize: 14,
       fontWeight: FontWeight.w600,
       color: Colors.red,
     ),
 
-    labelMedium: GoogleFonts.notoSerifBengali(
+    labelMedium: TextStyle(
+      fontFamily: 'Bangla',
       fontSize: 16,
       fontWeight: FontWeight.w600,
       color: kLightColorTheme.primary,
     ),
 
-    labelSmall: GoogleFonts.notoSerifBengali(
+    labelSmall: TextStyle(
+      fontFamily: 'Bangla',
       fontSize: 14,
       fontWeight: FontWeight.w600,
       color: kLightColorTheme.primary,
