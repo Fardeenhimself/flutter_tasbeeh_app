@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 var kDarkColorTheme = ColorScheme.fromSeed(
   brightness: Brightness.dark,
-  seedColor: Color.fromARGB(255, 47, 82, 73),
+  seedColor: Color.fromARGB(255, 92, 131, 116),
 );
 
 ThemeData darkTheme = ThemeData.dark().copyWith(
@@ -46,7 +46,7 @@ ThemeData darkTheme = ThemeData.dark().copyWith(
     bodyLarge: GoogleFonts.lateef(fontSize: 44, color: kDarkColorTheme.primary),
 
     bodyMedium: GoogleFonts.notoSerifBengali(
-      fontSize: 26,
+      fontSize: 22,
       color: kDarkColorTheme.primary,
       fontWeight: FontWeight.w600,
     ),

@@ -35,6 +35,7 @@ class CustomCategoryCard extends StatelessWidget {
                   Text(
                     reflection.arabic,
                     style: Theme.of(context).textTheme.bodyLarge,
+                    textAlign: TextAlign.end,
                   ),
                   const SizedBox(height: 10),
                   Text(

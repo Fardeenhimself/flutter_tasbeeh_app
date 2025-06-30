@@ -48,7 +48,7 @@ ThemeData lightTheme = ThemeData().copyWith(
     ),
 
     bodyMedium: GoogleFonts.notoSerifBengali(
-      fontSize: 26,
+      fontSize: 22,
       color: kLightColorTheme.primary,
       fontWeight: FontWeight.w600,
     ),

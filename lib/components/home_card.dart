@@ -36,6 +36,14 @@ class HomeCard extends StatelessWidget {
                 Navigator.pushNamed(context, '/asma_category');
               },
             ),
+            const SizedBox(height: 20),
+            CustomHomeCard(
+              text: 'তাশাহুদ',
+              imagePath: 'assets/images/dhikr.png',
+              onPressed: () {
+                Navigator.pushNamed(context, '/tasahud_category');
+              },
+            ),
           ],
         ),
       ),

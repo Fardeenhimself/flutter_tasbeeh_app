@@ -42,6 +42,7 @@ class CounterPageCard extends StatelessWidget {
                       ? reflectionType.arabic
                       : reflectionType.duaArabic,
                   style: Theme.of(context).textTheme.bodyLarge,
+                  textAlign: TextAlign.end,
                 ),
                 const SizedBox(height: 16),
                 Text(
