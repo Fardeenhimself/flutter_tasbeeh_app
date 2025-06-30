@@ -25,7 +25,7 @@ class CustomHomeCard extends StatelessWidget {
             children: [
               CustomAppStyle.roundImage(imagePath, context),
               const SizedBox(width: 20),
-              Text(text, style: CustomAppStyle.cardTitleStyle),
+              Text(text, style: Theme.of(context).textTheme.titleMedium),
             ],
           ),
         ),

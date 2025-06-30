@@ -1,47 +1,118 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-// ThemeData darkTheme = ThemeData(
-//   appBarTheme: AppBarTheme(
-//     backgroundColor: Colors.teal,
-//     foregroundColor: Colors.white,
-//     elevation: 10,
-//     centerTitle: true,
-//   ),
-//   scaffoldBackgroundColor: Colors.black38,
-//   brightness: Brightness.dark,
-//   colorScheme: ColorScheme.dark(
-//     primary: Color.fromRGBO(18, 18, 18, 1),
-//     secondary: Colors.green,
-//     shadow: Colors.grey.shade600,
-//   ),
-// );
-
-final ThemeData darkTheme = ThemeData(
+var kDarkColorTheme = ColorScheme.fromSeed(
   brightness: Brightness.dark,
-  scaffoldBackgroundColor: Colors.black38,
+  seedColor: Color.fromARGB(255, 47, 82, 73),
+);
 
-  appBarTheme: const AppBarTheme(
-    backgroundColor: Colors.teal,
-    foregroundColor: Colors.white,
-    elevation: 10,
+ThemeData darkTheme = ThemeData.dark().copyWith(
+  colorScheme: kDarkColorTheme,
+  appBarTheme: AppBarTheme().copyWith(
+    backgroundColor: kDarkColorTheme.primaryContainer,
+    foregroundColor: kDarkColorTheme.onPrimaryContainer,
     centerTitle: true,
   ),
 
-  cardColor: const Color.fromARGB(255, 48, 47, 47), // dark-friendly card color
-
-  colorScheme: ColorScheme.dark(
-    primary: const Color.fromRGBO(18, 18, 18, 1), // dark surface for cards
-    secondary: Colors.green,
-    surface: Color.fromRGBO(18, 18, 18, 1),
-    shadow: Colors.teal.shade200,
-    //shadow: Color.fromARGB(255, 48, 47, 47),
+  cardTheme: CardThemeData().copyWith(
+    color: kDarkColorTheme.primaryContainer,
+    shadowColor: kDarkColorTheme.secondaryContainer,
+    elevation: 5,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadiusGeometry.circular(16),
+    ),
   ),
 
-  shadowColor: Colors.black54,
+  textTheme: ThemeData().textTheme.copyWith(
+    titleLarge: GoogleFonts.galada(
+      fontSize: 35,
+      fontWeight: FontWeight.bold,
+      letterSpacing: 1.5,
+      color: kDarkColorTheme.primary,
+    ),
 
-  textTheme: const TextTheme(
-    bodyLarge: TextStyle(color: Colors.white),
-    bodyMedium: TextStyle(color: Colors.white70),
-    titleLarge: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+    titleMedium: GoogleFonts.notoSerifBengali(
+      fontSize: 26,
+      fontWeight: FontWeight.bold,
+      color: kDarkColorTheme.primary,
+    ),
+
+    titleSmall: GoogleFonts.notoSerifBengali(
+      fontSize: 16,
+      fontWeight: FontWeight.w600,
+      color: kDarkColorTheme.onTertiary,
+    ),
+
+    bodyLarge: GoogleFonts.lateef(fontSize: 44, color: kDarkColorTheme.primary),
+
+    bodyMedium: GoogleFonts.notoSerifBengali(
+      fontSize: 26,
+      color: kDarkColorTheme.primary,
+      fontWeight: FontWeight.w600,
+    ),
+
+    bodySmall: GoogleFonts.notoSerifBengali(
+      fontSize: 18,
+      color: kDarkColorTheme.primary,
+    ),
+
+    displayLarge: GoogleFonts.inter(
+      fontSize: 50,
+      color: kDarkColorTheme.primary,
+    ),
+
+    displayMedium: GoogleFonts.notoSerifBengali(
+      fontSize: 14,
+      color: kDarkColorTheme.tertiary,
+    ),
+
+    displaySmall: GoogleFonts.notoSerifBengali(
+      fontSize: 14,
+      fontWeight: FontWeight.w600,
+      color: Colors.red,
+    ),
+
+    labelMedium: GoogleFonts.notoSerifBengali(
+      fontSize: 16,
+      fontWeight: FontWeight.w600,
+      color: kDarkColorTheme.primary,
+    ),
+
+    labelSmall: GoogleFonts.notoSerifBengali(
+      fontSize: 14,
+      fontWeight: FontWeight.w600,
+      color: kDarkColorTheme.primary,
+    ),
+  ),
+
+  iconButtonTheme: IconButtonThemeData(
+    style: IconButton.styleFrom(
+      backgroundColor: kDarkColorTheme.primaryContainer,
+      foregroundColor: kDarkColorTheme.onPrimaryContainer,
+      elevation: 8,
+      padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+      shape: CircleBorder(),
+    ),
+  ),
+
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+      backgroundColor: kDarkColorTheme.primaryContainer,
+      foregroundColor: kDarkColorTheme.onPrimaryContainer,
+      minimumSize: Size(double.infinity, 50),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadiusGeometry.circular(12),
+      ),
+      padding: EdgeInsets.symmetric(vertical: 14),
+      elevation: 4,
+    ),
+  ),
+
+  sliderTheme: SliderThemeData().copyWith(
+    activeTrackColor: kDarkColorTheme.primaryContainer,
+    inactiveTrackColor: kDarkColorTheme.onPrimaryContainer,
+    thumbShape: RoundSliderThumbShape(enabledThumbRadius: 10.0),
+    overlayShape: RoundSliderOverlayShape(overlayRadius: 12.0),
+    thumbColor: Colors.red,
   ),
 );

@@ -81,28 +81,23 @@ class _CounterPageState extends State<CounterPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  //Reset Button
                   CustomAppStyle.styledIconButton(
+                    context: context,
                     onPress: () => resetCounter(),
                     icon: Icon(Icons.replay),
                   ),
+
                   //Plus Button
-                  IconButton(
-                    onPressed: () => incrementCounter(),
-                    icon: Icon(Icons.add),
-                    style: IconButton.styleFrom(
-                      backgroundColor: Colors.teal[300]!,
-                      foregroundColor: Colors.white,
-                      iconSize: 100,
-                      enableFeedback: true,
-                      shape: CircleBorder(),
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 40,
-                        vertical: 20,
-                      ),
-                      elevation: 8,
-                    ),
-                  ),
                   CustomAppStyle.styledIconButton(
+                    icon: Icon(Icons.add, size: 100),
+                    context: context,
+                    onPress: () => incrementCounter(),
+                  ),
+
+                  //Minus Button
+                  CustomAppStyle.styledIconButton(
+                    context: context,
                     onPress: () => decrementCounter(),
                     icon: Icon(Icons.remove),
                   ),

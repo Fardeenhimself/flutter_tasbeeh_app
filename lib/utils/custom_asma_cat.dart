@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tasbeeh_app/model/asma_model.dart';
-import 'package:tasbeeh_app/utils/custom_app_style.dart';
 
 class CustomAsmacat extends StatelessWidget {
   const CustomAsmacat({super.key, required this.dua, required this.onTap});
@@ -17,12 +16,6 @@ class CustomAsmacat extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         splashColor: Colors.teal,
         child: Card(
-          color: Theme.of(context).colorScheme.primary,
-          shadowColor: Theme.of(context).colorScheme.shadow,
-          elevation: 5,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadiusGeometry.circular(16),
-          ),
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             child: Padding(
@@ -30,18 +23,30 @@ class CustomAsmacat extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(dua.duaCat, style: CustomAppStyle.duaCatStyle),
+                  Text(
+                    dua.duaCat,
+                    style: Theme.of(context).textTheme.labelSmall,
+                  ),
                   const SizedBox(height: 10),
-                  Text(dua.duaName, style: CustomAppStyle.cardTitleStyle),
+                  Text(
+                    dua.duaName,
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
                   const SizedBox(height: 10),
-                  Text(dua.duaArabic, style: CustomAppStyle.cardArabicStyle),
+                  Text(
+                    dua.duaArabic,
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
                   const SizedBox(height: 10),
                   Text(
                     dua.duaMeaning,
-                    style: CustomAppStyle.cardTranslationStyle,
+                    style: Theme.of(context).textTheme.bodySmall,
                   ),
                   const SizedBox(height: 10),
-                  Text(dua.duaIdentity, style: CustomAppStyle.duaIdentityStyle),
+                  Text(
+                    dua.duaIdentity,
+                    style: Theme.of(context).textTheme.labelSmall,
+                  ),
                 ],
               ),
             ),

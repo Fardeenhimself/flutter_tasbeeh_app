@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tasbeeh_app/model/reflect_model.dart';
-import 'package:tasbeeh_app/utils/custom_app_style.dart';
 
 class CounterPageCard extends StatelessWidget {
   CounterPageCard({
@@ -35,21 +34,21 @@ class CounterPageCard extends StatelessWidget {
                   checkDisplay == ReflectModel
                       ? reflectionType.title
                       : reflectionType.duaName,
-                  style: CustomAppStyle.cardTitleStyle,
+                  style: Theme.of(context).textTheme.bodyMedium,
                 ),
                 const SizedBox(height: 16),
                 Text(
                   checkDisplay == ReflectModel
                       ? reflectionType.arabic
                       : reflectionType.duaArabic,
-                  style: CustomAppStyle.cardArabicStyle,
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
                 const SizedBox(height: 16),
                 Text(
                   checkDisplay == ReflectModel
                       ? reflectionType.translation
                       : reflectionType.duaMeaning,
-                  style: CustomAppStyle.cardTranslationStyle,
+                  style: Theme.of(context).textTheme.bodySmall,
                 ),
               ],
             ),
@@ -61,7 +60,7 @@ class CounterPageCard extends StatelessWidget {
           padding: const EdgeInsets.all(20.0),
           child: Text(
             '$counter / $maxCount',
-            style: CustomAppStyle.counterNumberStyle,
+            style: Theme.of(context).textTheme.displayLarge,
           ),
         ),
         const SizedBox(height: 30),

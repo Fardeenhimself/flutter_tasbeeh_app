@@ -60,7 +60,7 @@ class CustomDrawer extends StatelessWidget {
                 const SizedBox(width: 10),
                 Text(
                   'facebook.com/fardeenhimself',
-                  style: GoogleFonts.spaceMono(fontSize: 12, letterSpacing: 1),
+                  style: GoogleFonts.inter(fontSize: 12, letterSpacing: 1),
                 ),
               ],
             ),
@@ -75,7 +75,7 @@ class CustomDrawer extends StatelessWidget {
                 const SizedBox(width: 10),
                 Text(
                   'fardeen.cse20@gmail.com',
-                  style: GoogleFonts.spaceMono(
+                  style: GoogleFonts.inter(
                     fontSize: 12,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1,

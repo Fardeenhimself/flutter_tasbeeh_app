@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:tasbeeh_app/utils/custom_app_style.dart';
 
 class ShowSuccessModal extends StatelessWidget {
   const ShowSuccessModal({super.key});
@@ -16,12 +14,12 @@ class ShowSuccessModal extends StatelessWidget {
       titlePadding: const EdgeInsets.only(top: 20),
       title: Column(
         children: [
-          Text('🎉', style: TextStyle(fontSize: 40)),
+          Text('🎉', style: Theme.of(context).textTheme.titleLarge),
           const SizedBox(height: 12),
           Text(
             'মাশা আল্লাহ!',
             textAlign: TextAlign.center,
-            style: CustomAppStyle.cardTitleStyle,
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
           const SizedBox(height: 12),
         ],
@@ -29,31 +27,19 @@ class ShowSuccessModal extends StatelessWidget {
       content: Text(
         'আপনি আপনার লক্ষ্য পূর্ণ করেছেন।',
         textAlign: TextAlign.center,
-        style: CustomAppStyle.cardTranslationStyle,
+        style: Theme.of(context).textTheme.bodySmall,
       ),
       actionsAlignment: MainAxisAlignment.center,
-      actionsPadding: const EdgeInsets.only(bottom: 16, top: 10),
+      actionsPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       actions: [
         ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.teal[600],
-            foregroundColor: Colors.white,
-            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadiusGeometry.circular(12),
-            ),
-            elevation: 4,
-          ),
+          style: Theme.of(context).elevatedButtonTheme.style,
           onPressed: () {
             Navigator.of(context).pop();
           },
           child: Text(
             'জাযাকআল্লাহু খায়ের',
-            style: GoogleFonts.notoSerifBengali(
-              fontSize: 14,
-              fontWeight: FontWeight.w600,
-              letterSpacing: 0.5,
-            ),
+            style: Theme.of(context).textTheme.bodySmall,
           ),
         ),
       ],

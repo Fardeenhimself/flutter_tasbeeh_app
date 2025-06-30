@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tasbeeh_app/components/custom_drawer.dart';
-import 'package:tasbeeh_app/utils/custom_app_style.dart';
 import 'package:tasbeeh_app/utils/custom_home_card.dart';
 
 class HomeCard extends StatelessWidget {
@@ -11,7 +10,7 @@ class HomeCard extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
-        title: Text('তাসবিহ', style: CustomAppStyle.appBarStyle(context)),
+        title: Text('তাসবিহ', style: Theme.of(context).textTheme.titleLarge),
       ),
       extendBodyBehindAppBar: true,
 
