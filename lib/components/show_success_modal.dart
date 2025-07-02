@@ -19,7 +19,7 @@ class ShowSuccessModal extends StatelessWidget {
           Text(
             'মাশা আল্লাহ!',
             textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.bodyLarge,
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
           const SizedBox(height: 12),
         ],

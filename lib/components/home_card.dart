@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:haptic_feedback/haptic_feedback.dart';
 import 'package:tasbeeh_app/components/custom_drawer.dart';
+import 'package:tasbeeh_app/components/haptics_helper.dart';
 import 'package:tasbeeh_app/utils/custom_home_card.dart';
 
 class HomeCard extends StatelessWidget {
@@ -24,7 +26,8 @@ class HomeCard extends StatelessWidget {
             CustomHomeCard(
               text: 'জিকির',
               imagePath: 'assets/images/tasbih.png',
-              onPressed: () {
+              onPressed: () async {
+                await HapticsHelper.vibrate(HapticsType.light);
                 Navigator.pushNamed(context, '/reflect_category');
               },
             ),
@@ -32,7 +35,8 @@ class HomeCard extends StatelessWidget {
             CustomHomeCard(
               text: 'দুয়া',
               imagePath: 'assets/images/hand.png',
-              onPressed: () {
+              onPressed: () async {
+                await HapticsHelper.vibrate(HapticsType.light);
                 Navigator.pushNamed(context, '/asma_category');
               },
             ),
@@ -40,7 +44,8 @@ class HomeCard extends StatelessWidget {
             CustomHomeCard(
               text: 'তাশাহুদ',
               imagePath: 'assets/images/dhikr.png',
-              onPressed: () {
+              onPressed: () async {
+                await HapticsHelper.vibrate(HapticsType.light);
                 Navigator.pushNamed(context, '/tasahud_category');
               },
             ),

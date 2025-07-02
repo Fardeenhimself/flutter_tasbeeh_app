@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:haptic_feedback/haptic_feedback.dart';
 import 'package:tasbeeh_app/components/custom_drawer.dart';
+import 'package:tasbeeh_app/components/haptics_helper.dart';
 import 'package:tasbeeh_app/model/reflect_model.dart';
 import 'package:tasbeeh_app/pages/counter_page.dart';
 import 'package:tasbeeh_app/utils/custom_category_card.dart';
@@ -76,8 +78,11 @@ class ReflectCategory extends StatelessWidget {
                                   style: Theme.of(
                                     context,
                                   ).elevatedButtonTheme.style,
-                                  onPressed: () {
+                                  onPressed: () async {
                                     Navigator.pop(context);
+                                    await HapticsHelper.vibrate(
+                                      HapticsType.light,
+                                    );
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:haptic_feedback/haptic_feedback.dart';
 import 'package:tasbeeh_app/components/custom_drawer.dart';
+import 'package:tasbeeh_app/components/haptics_helper.dart';
 import 'package:tasbeeh_app/components/show_success_modal.dart';
 import 'package:tasbeeh_app/utils/counter_page_card.dart';
 import 'package:tasbeeh_app/utils/custom_app_style.dart';
-import 'package:flutter/services.dart';
 
 class CounterPage extends StatefulWidget {
   CounterPage({
@@ -24,7 +25,7 @@ class _CounterPageState extends State<CounterPage> {
   int _countNumber = 0;
 
   //Increment Function
-  void incrementCounter() {
+  void incrementCounter() async {
     if (_countNumber < widget.maxCount) {
       setState(() {
         _countNumber++;
@@ -33,7 +34,9 @@ class _CounterPageState extends State<CounterPage> {
         Future.delayed(Duration(milliseconds: 300), () {
           if (!mounted) return;
 
-          HapticFeedback.heavyImpact();
+          //Haptics to play when success
+          HapticsHelper.vibrate(HapticsType.success);
+
           showDialog(
             context: context,
             builder: (context) => ShowSuccessModal(),
@@ -84,7 +87,10 @@ class _CounterPageState extends State<CounterPage> {
                   //Reset Button
                   CustomAppStyle.styledIconButton(
                     context: context,
-                    onPress: () => resetCounter(),
+                    onPress: () async {
+                      await HapticsHelper.vibrate(HapticsType.light);
+                      resetCounter();
+                    },
                     icon: Icon(Icons.replay),
                   ),
 
@@ -92,13 +98,19 @@ class _CounterPageState extends State<CounterPage> {
                   CustomAppStyle.styledIconButton(
                     icon: Icon(Icons.add, size: 100),
                     context: context,
-                    onPress: () => incrementCounter(),
+                    onPress: () async {
+                      await HapticsHelper.vibrate(HapticsType.light);
+                      incrementCounter();
+                    },
                   ),
 
                   //Minus Button
                   CustomAppStyle.styledIconButton(
                     context: context,
-                    onPress: () => decrementCounter(),
+                    onPress: () async {
+                      await HapticsHelper.vibrate(HapticsType.light);
+                      decrementCounter();
+                    },
                     icon: Icon(Icons.remove),
                   ),
                 ],
