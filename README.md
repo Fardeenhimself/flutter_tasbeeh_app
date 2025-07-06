@@ -16,12 +16,16 @@ This is a tasbeeh app created with flutter without any state management tool. Th
 
 
 ## Screenshots
+### Light Mode
 
 ![Splash Screen](screenshots/splash.png)
 ![Home](screenshots/home.png)
 ![Dhikr](screenshots/dhikr.png)
 ![Selection](screenshots/selection.png)
 ![Counter](screenshots/counter.png)
+
+### Dark Mode
+
 ![Home_DarkMode](screenshots/home_dark.png)
 ![Counter_DarkMode](screenshots/counter_dark.png)
 ![About](screenshots/about.png)
