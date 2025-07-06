@@ -1,16 +1,43 @@
-# tasbeeh_app
 
-A new Flutter project.
+# Flutter Tasbeeh App
 
-## Getting Started
+This is a tasbeeh app created with flutter without any state management tool. The app is inspired from a basic counter program.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Features
+
+- Light/dark mode toggle
+- 3 modes (Reflect, Dua, and Dua of Salat)
+- User can select how many times he wants to do dhikr.
+- User can memorise dua from a selected number of dua's.
+- Optimized for mobile (android) and desktop (windows).
+
+
+## Screenshots
+
+![Splash Screen](screenshots/splash.png)
+![Home](screenshots/home.png)
+![Dhikr](screenshots/dhikr.png)
+![Selection](screenshots/selection.png)
+![Counter](screenshots/counter.png)
+![Home_DarkMode](screenshots/home_dark.png)
+![Counter_DarkMode](screenshots/counter_dark.png)
+![About](screenshots/about.png)
+
+
+## FAQ
+
+#### How many times can I do Dhikr?
+
+Ans: You can select the amount 
+
+#### Does it remember how many times I did?
+
+Ans: Since it doens't have any state management, it doesn't if you close and rerun the app.
+
+
+## Support
+
+To know more, email fardeen.cse20@gmail.com 
